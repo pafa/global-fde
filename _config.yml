@@ -8,6 +8,11 @@ lang: zh-CN
 markdown: kramdown
 plugins:
   - jekyll-relative-links
+  - jekyll-optional-front-matter
+include:
+  - README.md
+optional_front_matter:
+  remove_originals: true
 relative_links:
   enabled: true
 kramdown:
@@ -19,3 +24,9 @@ defaults:
       path: ""
     values:
       layout: book
+  - scope:
+      path: README.md
+    values:
+      title: 全球FDE实战
+      permalink: /
+      nav: false
