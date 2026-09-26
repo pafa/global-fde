@@ -1,0 +1,6 @@
+{
+  "kind": "synthetic_teaching",
+  "invite_ttl_minutes": 15,
+  "time_unit": "从教学演练起点计算的分钟；无真实日历或时区",
+  "expired_when": "now >= expires_at"
+}

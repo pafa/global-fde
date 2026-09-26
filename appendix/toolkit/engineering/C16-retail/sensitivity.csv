@@ -1,0 +1,5 @@
+entry,orders,returns,retained_revenue,goods_margin,outbound,return_handling,service,ai,net_contribution
+A_base,10,1,900,270,80,10,20,0,160
+B_base,5,2,450,135,40,20,30,25,20
+B_7_orders,7,1,900,270,56,10,30,25,149
+B_8_orders,8,1,1050,315,64,10,30,25,186

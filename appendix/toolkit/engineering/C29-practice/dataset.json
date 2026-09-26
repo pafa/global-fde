@@ -1,0 +1,41 @@
+{
+  "kind": "synthetic_teaching",
+  "sessions": {
+    "S1": {
+      "name": "周六上午合成活动",
+      "capacity": 1
+    },
+    "S2": {
+      "name": "周日上午合成活动",
+      "capacity": 1
+    }
+  },
+  "people": {
+    "P1": "合成人甲",
+    "P2": "合成人乙",
+    "P3": "合成人丙",
+    "P4": "合成人丁"
+  },
+  "registrations": {
+    "R11": {
+      "session_id": "S1",
+      "person_id": "P1",
+      "status": "booked"
+    },
+    "R21": {
+      "session_id": "S2",
+      "person_id": "P1",
+      "status": "booked"
+    }
+  },
+  "waitlists": {
+    "S1": [
+      "P2",
+      "P3"
+    ],
+    "S2": [
+      "P2",
+      "P4"
+    ]
+  }
+}

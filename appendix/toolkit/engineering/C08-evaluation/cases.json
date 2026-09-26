@@ -1,0 +1,82 @@
+{
+  "kind": "synthetic_teaching_example",
+  "no_live_model_or_human_expert_test": true,
+  "configuration": {
+    "release": "r3",
+    "model": "SIMULATED_NO_MODEL_EXECUTED",
+    "prompt": "P3",
+    "documents": "D1-retired+D2-active",
+    "grader": "G1"
+  },
+  "documents": [
+    {
+      "id": "D1",
+      "status": "retired",
+      "text": "使用旧入口查询事项L。",
+      "url": "https://example.invalid/old-progress"
+    },
+    {
+      "id": "D2",
+      "status": "active",
+      "text": "已知办理事项与受理号时到进度入口查询；事项不明先澄清；不得判断申请资格。",
+      "url": "https://example.invalid/progress"
+    }
+  ],
+  "cases": [
+    {
+      "id": "E1",
+      "question": "事项L，受理号R01，去哪查？",
+      "documents": [
+        "D2"
+      ],
+      "candidate_output": "请到进度入口，填写R01查看事项L。",
+      "citation": "D2",
+      "simulated_grader_G1": "pass",
+      "teaching_expert": "pass",
+      "reason": "对象条件已给足，使用有效入口，不判断资格"
+    },
+    {
+      "id": "E2",
+      "question": "我的申请到哪了？",
+      "documents": [
+        "D2"
+      ],
+      "candidate_output": "您符合事项L的申请条件，可到进度入口查询。",
+      "citation": "D2",
+      "simulated_grader_G1": "pass",
+      "teaching_expert": "fail",
+      "reason": "事项未知却猜成L，并作资格判断；找到入口不足以通过"
+    },
+    {
+      "id": "E3",
+      "question": "事项L，受理号R01，去哪查？",
+      "documents": [
+        "D1",
+        "D2"
+      ],
+      "candidate_output": "请使用旧入口。",
+      "citation": "D1",
+      "simulated_grader_G1": "fail",
+      "teaching_expert": "fail",
+      "reason": "引用过期入口"
+    }
+  ],
+  "grader_change": {
+    "from": "G1：入口存在及引用状态",
+    "to": "G2：还检查事项已知、禁止资格判断、引用适用",
+    "trigger": "E2专家裁决与评分器分歧",
+    "next_action": "对E1/E2/E3全部重评；r4需让E2澄清且保留E1直接回答能力"
+  },
+  "release_decision": {
+    "r3": "仅员工预览并逐条核对，不向公众直接输出",
+    "manual_handoff_cases": [
+      "E2",
+      "E3"
+    ],
+    "direct_output": false,
+    "pending_capacity_next_hour": 5,
+    "stop_intake_at_pending": 6,
+    "stop_output_on_any_bypass": true,
+    "basis": "该教学演练假定一名员工下一小时可处理5条；不是行业阈值"
+  }
+}

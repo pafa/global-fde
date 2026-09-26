@@ -1,0 +1,4 @@
+report_id,entity_id,observed_at,received_at,definition,version,value,status,supersedes
+r1,A,T08:00,T12:00,D1,1,18,superseded,
+r2,A,T08:00,T14:00,D1,2,16,confirmed,r1
+b0,B,T08:00,,D1,0,,not_reported,

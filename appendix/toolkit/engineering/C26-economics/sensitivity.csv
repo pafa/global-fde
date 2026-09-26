@@ -1,0 +1,6 @@
+scenario,monthly_tasks,avoided_outsource_hours_per_month,extra_engineer_days,deployment_variable_resource_multiplier,supplier_wide_remainder_wan,customer_economic_difference_wan,customer_cash_difference_wan
+baseline,10000,400,0,1,-5,-4,2
+outsourcing_only_300h,10000,300,0,1,-5,-28,-22
+extra_10_engineer_days,10000,400,10,1,-8,-4,2
+resource_calls_double,10000,400,0,2,-8,-4,2
+both_rework_and_double_calls,10000,400,10,2,-11,-4,2

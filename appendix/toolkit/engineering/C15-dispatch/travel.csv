@@ -1,0 +1,5 @@
+from,to,minutes
+W,O1,40
+W,O2,20
+O1,O2,25
+O2,O1,25

@@ -1,0 +1,82 @@
+{
+  "kind": "synthetic_teaching",
+  "window_semantics": "开始卸货；不是卸完",
+  "cost_scope": "每辆出车一次的教学固定成本，未计回程或司机工时；不是真实报价",
+  "plans": [
+    {
+      "id": "P1",
+      "assignment": "V2送O1",
+      "decision": "reject",
+      "reasons": [
+        "120>100公斤",
+        "需要2人但V2只有1人"
+      ]
+    },
+    {
+      "id": "P2",
+      "assignment": "V1先O1后O2",
+      "decision": "reject",
+      "timeline": [
+        "13:30两单均备好后离仓",
+        "14:10开始卸O1",
+        "14:30离开O1",
+        "14:55到O2"
+      ],
+      "reasons": [
+        "O2最晚14:05开始卸货"
+      ]
+    },
+    {
+      "id": "P3",
+      "assignment": "V1先O2后O1",
+      "decision": "choose_initial",
+      "timeline": [
+        "13:30离仓，两单已备好，总重200",
+        "13:50到O2",
+        "14:00离开O2",
+        "14:25到O1"
+      ],
+      "cost": 80,
+      "O1_slack_minutes": 5
+    },
+    {
+      "id": "P4",
+      "assignment": "V1送O1；V2送O2",
+      "decision": "feasible_alternative",
+      "timeline": [
+        "V1 13:20离仓，14:00到O1",
+        "V2 13:30离仓，13:50到O2"
+      ],
+      "cost": 130
+    },
+    {
+      "id": "P5",
+      "assignment": "延迟后仍V1合单",
+      "decision": "reject_after_delay",
+      "timeline": [
+        "V1最早13:50离仓",
+        "14:10到O2"
+      ],
+      "reasons": [
+        "超过O2的14:05窗口"
+      ]
+    },
+    {
+      "id": "P6",
+      "assignment": "延迟后分车",
+      "decision": "choose_after_delay",
+      "preconditions": [
+        "13:35确认V1只能13:50出发",
+        "两单尚未装车",
+        "仓库已从V1清单解除O2再交给V2"
+      ],
+      "timeline": [
+        "V2 13:40离仓，14:00到O2",
+        "V1 13:50离仓，14:30到O1"
+      ],
+      "cost": 130,
+      "O1_slack_minutes": 0,
+      "next_action": "持续关注O1；如再晚先与客户重约，不自行改承诺"
+    }
+  ]
+}

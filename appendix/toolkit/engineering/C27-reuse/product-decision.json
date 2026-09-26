@@ -1,0 +1,12 @@
+{
+  "kind": "synthetic_teaching",
+  "request": "A的旧打印机专用纸张、内部编号及频繁变化的版式",
+  "legal": true,
+  "technically_possible": true,
+  "other_confirmed_customers": 0,
+  "decision": "客户扩展，不进入公共核心",
+  "accepted_route": "标准导出接口加单独负责、单独报价的打印扩展",
+  "if_no_maintenance_agreement": "保留人工打印，不承诺功能进入公共支持",
+  "revisit_trigger": "更多客户出现相同问题且维护成本支持公共化",
+  "not_a_real_contract": true
+}

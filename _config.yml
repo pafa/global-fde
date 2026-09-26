@@ -1,0 +1,21 @@
+title: 全球FDE实战
+description: 从概念的早期记录到全球行业现场，一本兼顾经营与技术的中文开放书。
+url: https://pafa.github.io
+baseurl: /global-fde
+repository: pafa/global-fde
+edition: 2026年9月版
+lang: zh-CN
+markdown: kramdown
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: book

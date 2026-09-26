@@ -1,0 +1,4 @@
+kind,version,task,observation,change,verification
+合成教学意见非真人反馈,v1_bad_lookup,只取消S1,坏办法按人查出R11和R21，连S2也会取消,用报名ID和场次共同核对,取消R11后R21仍booked
+合成教学意见非真人反馈,v2,同一取消再次抵达,同事件同内容返回原结果；同号不同内容拒绝,保留事件编号与内容配对,duplicate和id_conflict均不改状态
+合成教学意见非真人反馈,v3,接手者将有效期15改10,4分钟确认的邀请，15分钟时已过新期限,修改config或使用--ttl 10；重跑边界,15分钟配置not_due；10分钟配置expired_next_draft

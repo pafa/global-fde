@@ -1,0 +1,50 @@
+{
+  "kind": "synthetic_teaching_example",
+  "definition": "D1：本练习约定的可用容量；不是医疗定义或HHS规则",
+  "grain": [
+    "entity_id",
+    "observed_at",
+    "definition"
+  ],
+  "version_rule": "每一统计单位按已确认替代关系取当时有效报告；不能只按上传时间取最后一份",
+  "quantity_type": "nonnegative_integer_or_null",
+  "null_rule": "not_reported不转换为0；公开结果显示已知合计与覆盖数",
+  "contact_relation": "one_to_many; attach after quantity aggregation; do not sum joined quantities",
+  "times": "T表示同一个教学日，观察时刻与接收/发布时刻分列；不代表现实事件日期",
+  "owners": {
+    "meaning": "数据负责人",
+    "transformation": "工程人员",
+    "report_use": "报表负责人"
+  },
+  "access": {
+    "aggregate_reader": "已知总数及覆盖",
+    "record_reviewer": "获授权的原记录和替代确认；联系人不随汇总公开"
+  },
+  "correction_policy": "连接错误修复P0→P1；源头确认r2后P1→P2，保留历史并通知依赖各版的报表使用者",
+  "checks": [
+    {
+      "input": "r1 with 2 contacts",
+      "expected_total": 18
+    },
+    {
+      "input": "r1 with 3 contacts",
+      "expected_total": 18
+    },
+    {
+      "input": "two separate entities each 18",
+      "expected_total": 36
+    },
+    {
+      "input": "B not_reported",
+      "expected_value": null
+    },
+    {
+      "input": "r2 received but not confirmed",
+      "expected_action": "hold_for_owner_confirmation"
+    },
+    {
+      "input": "r2 confirmed replacement",
+      "expected_total": 16
+    }
+  ]
+}

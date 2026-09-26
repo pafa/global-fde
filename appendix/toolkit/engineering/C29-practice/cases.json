@@ -1,0 +1,122 @@
+[
+  {
+    "id": "S1_cancel",
+    "event": {
+      "event_id": "E01",
+      "action": "cancel",
+      "session_id": "S1",
+      "registration_id": "R11",
+      "actor": "ORG",
+      "organizer_approved": true,
+      "now": 0
+    },
+    "expected_status": "cancelled_draft_created"
+  },
+  {
+    "id": "S1_duplicate",
+    "event": {
+      "event_id": "E01",
+      "action": "cancel",
+      "session_id": "S1",
+      "registration_id": "R11",
+      "actor": "ORG",
+      "organizer_approved": true,
+      "now": 0
+    },
+    "expected_status": "duplicate"
+  },
+  {
+    "id": "ambiguous",
+    "event": {
+      "event_id": "AMB1",
+      "action": "cancel",
+      "person_id": "P1",
+      "text": "取消周末那一场",
+      "actor": "ORG",
+      "organizer_approved": false,
+      "now": 0
+    },
+    "expected_status": "needs_clarification"
+  },
+  {
+    "id": "S1_confirm",
+    "event": {
+      "event_id": "CNF1",
+      "action": "confirm_offer",
+      "offer_id": "OFFER-S1-1",
+      "actor": "ORG",
+      "now": 1
+    },
+    "expected_status": "invited"
+  },
+  {
+    "id": "S1_accept",
+    "event": {
+      "event_id": "ACC1",
+      "action": "accept_offer",
+      "offer_id": "OFFER-S1-1",
+      "actor": "P2",
+      "now": 1.5
+    },
+    "expected_status": "booked"
+  },
+  {
+    "id": "S2_cancel",
+    "event": {
+      "event_id": "E02",
+      "action": "cancel",
+      "session_id": "S2",
+      "registration_id": "R21",
+      "actor": "ORG",
+      "organizer_approved": true,
+      "now": 3
+    },
+    "expected_status": "cancelled_draft_created"
+  },
+  {
+    "id": "S2_confirm",
+    "event": {
+      "event_id": "CNF2",
+      "action": "confirm_offer",
+      "offer_id": "OFFER-S2-1",
+      "actor": "ORG",
+      "now": 4
+    },
+    "expected_status": "invited"
+  },
+  {
+    "id": "S2_expire",
+    "event": {
+      "event_id": "EXP1",
+      "action": "expire",
+      "offer_id": "OFFER-S2-1",
+      "actor": "CLOCK",
+      "now": 20
+    },
+    "expected_status": "expired_next_draft"
+  },
+  {
+    "id": "S2_late_accept",
+    "event": {
+      "event_id": "LATE1",
+      "action": "accept_offer",
+      "offer_id": "OFFER-S2-1",
+      "actor": "P2",
+      "now": 21
+    },
+    "expected_status": "rejected_expired"
+  },
+  {
+    "id": "id_conflict",
+    "event": {
+      "event_id": "E01",
+      "action": "cancel",
+      "session_id": "S2",
+      "registration_id": "R21",
+      "actor": "ORG",
+      "organizer_approved": true,
+      "now": 0
+    },
+    "expected_status": "id_conflict"
+  }
+]

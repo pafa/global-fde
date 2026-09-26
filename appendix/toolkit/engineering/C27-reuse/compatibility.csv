@@ -1,0 +1,9 @@
+case_id,customer,conditions,v1_expected,v2_expected,reason,actual_result
+A1,A,白天普通区；无主管批准,block,block,A始终需要主管批准,not_run
+A2,A,当前任务版本已有主管批准,allow,allow,迁移后保留既有承诺,not_run
+B1,B,夜间特殊区；资质有效；当前版本轮值经理批准,unsupported,allow,B策略两项均满足,not_run
+B2,B,夜间特殊区；资质缺失；批准存在,unsupported,block,缺资质,not_run
+B3,B,夜间特殊区；资质有效；批准缺失,unsupported,block,缺轮值批准,not_run
+B4,B,缺时区,unsupported,hold,不能默认为白天,not_run
+A3,A,批准后改变时间或区域，任务版本增加,block_old_approval,block_old_approval,批准只绑定旧任务版本,not_run
+B5,B,批准后改变时间或区域，任务版本增加,unsupported,block_old_approval,重新核对B条件并审批,not_run

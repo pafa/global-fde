@@ -1,0 +1,24 @@
+[
+  {
+    "id": "X1",
+    "text": "我是合成人甲，请取消周日S2的报名R21。",
+    "expected_proposal": {
+      "person_id": "P1",
+      "session_id": "S2",
+      "registration_id": "R21"
+    },
+    "next": "组织者确认后才进入取消动作",
+    "actual_model_output": null
+  },
+  {
+    "id": "X2",
+    "text": "我是合成人甲，取消周末那一场。",
+    "expected_proposal": {
+      "person_id": "P1",
+      "session_id": null,
+      "registration_id": null
+    },
+    "next": "询问哪一场；不能猜选S1或S2",
+    "actual_model_output": null
+  }
+]

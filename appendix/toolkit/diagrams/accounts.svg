@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 588" role="img" aria-labelledby="title desc">
+<title id="title">同一份合同，要看三本账</title><desc id="desc">作者教学示意。客户账、供应商项目账、产品账并列；另外按实际收付时间检查现金缺口，三账不构成顺序流程。</desc>
+<rect width="480" height="588" fill="#f7f6ef"/><g font-family="sans-serif" fill="#244f40">
+<text x="24" y="39" font-size="21">同一份合同，要看三本账</text>
+<rect x="24" y="65" width="432" height="90" rx="7" fill="#fffef9" stroke="#bac8b8"/><text x="43" y="97" font-size="21">客户账</text><text x="43" y="130" font-size="17">业务收益与客户投入是否相称？</text>
+<rect x="24" y="175" width="432" height="100" rx="7" fill="#fffef9" stroke="#bac8b8"/><text x="43" y="207" font-size="21">供应商项目账</text><text x="43" y="239" font-size="17">合同收入能否覆盖取得、交付</text><text x="43" y="261" font-size="17">和维护的对应成本？</text>
+<rect x="24" y="295" width="432" height="100" rx="7" fill="#fffef9" stroke="#bac8b8"/><text x="43" y="327" font-size="21">产品账</text><text x="43" y="359" font-size="17">共同研发与客户专属工作分开；</text><text x="43" y="381" font-size="17">留下的能力能否被其他客户复用？</text>
+<path d="M24 416H456" stroke="#bac8b8"/><text x="24" y="449" font-size="20">另行核验：现金收付时间</text><text x="24" y="481" font-size="17">按实际收付款检查资金缺口。</text><text x="24" y="507" font-size="17">账面划算，不代表周转资金足够。</text>
+<text x="24" y="565" font-size="14" fill="#64716b">作者教学示意 · 三账并列，不是顺序流程</text></g></svg>

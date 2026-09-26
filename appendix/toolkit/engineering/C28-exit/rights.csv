@@ -1,0 +1,6 @@
+object_id,object,teaching_agreement,verification,status
+D,客户工单附件状态历史,约定用途下可导出保管,数量、关系、摘要及T01—03可恢复,exercise_only
+A,项目适配代码与配置,持续内部使用与修改许可,接任者独立账号读取安装解释,exercise_only
+P,供应商原有运行平台,服务期可调用；无平台代码,另选并验证运行环境,not_ready
+L,第三方组件L,向新维护方分发权未确认,合同负责人核清或替换,blocked
+K,旧账号密钥共享链接,不能随文件复制继承授权,新身份可运行后撤旧权限并检查依赖,pending

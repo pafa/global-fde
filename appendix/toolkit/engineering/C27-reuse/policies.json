@@ -1,0 +1,45 @@
+{
+  "kind": "synthetic_teaching",
+  "core_v1": {
+    "supported_customers": [
+      "A"
+    ],
+    "policy_A": {
+      "approval": "supervisor_for_every_dispatch",
+      "bind_to_task_version": true
+    }
+  },
+  "core_v2": {
+    "require_explicit_customer_policy": true,
+    "unknown_configuration": "stop_migration",
+    "A": {
+      "approval": "supervisor_for_every_dispatch",
+      "bind_to_task_version": true
+    },
+    "B": {
+      "scope": "本例只定义夜间特殊区，不推断其他组合",
+      "timezone_required": true,
+      "qualification_required": true,
+      "approval": "rotating_manager",
+      "bind_to_task_version": true
+    }
+  },
+  "regression_to_reject": {
+    "proposal": "v2全局白天免审批默认值",
+    "reason": "会使A1由block变allow，破坏既有承诺"
+  },
+  "migration": {
+    "receiver": "公共派单产品组",
+    "customer_confirmation": [
+      "A负责人确认A策略",
+      "B负责人确认B策略"
+    ],
+    "backup": [
+      "旧核心版本",
+      "匹配配置",
+      "测试记录版本"
+    ],
+    "rollback": "恢复匹配的程序与配置；本例不涉及真实派单",
+    "actual_execution": "not_run"
+  }
+}

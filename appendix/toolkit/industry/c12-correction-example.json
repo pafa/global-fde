@@ -1,0 +1,24 @@
+{
+  "id": "TK-C12-01",
+  "type": "fictional_teaching_example",
+  "not_customer_data": true,
+  "task_id": "A-17",
+  "unit": "万元",
+  "previous_period_revenue": 1000,
+  "document_versions": [
+    {"id": "v1", "locator": "第2页", "current_period_revenue": 1200, "status": "historical"},
+    {"id": "v2", "locator": "第2页", "current_period_revenue": 900, "supersedes": "v1", "confirmation": "申请方确认函：同一企业、期间与字段"}
+  ],
+  "outputs": [
+    {"id": "S1", "document_id": "v1", "growth_pct": 20, "status": "correction_required_no_new_use"},
+    {"id": "S2", "document_id": "v2", "growth_pct": -10, "supersedes": "S1", "status": "reference_and_calculation_checked"}
+  ],
+  "decisions": [
+    {"id": "J1", "output_id": "S1", "action": "进入收入增长资料常规复核队列", "status": "superseded"},
+    {"id": "J2", "output_id": "S2", "action": "核对收入变化原因，不作承保结论", "supersedes": "J1", "status": "accepted_by_underwriting_owner"}
+  ],
+  "cause": "教学取件规则仍选首份附件，未应用已确认替代关系",
+  "validation": ["重跑A-17引用v2且计算为-10%", "缺替代确认时停止", "其他期间附件不覆盖本期"],
+  "external_impact": "教学例已核实没有对外报价；实际情况须重新检查",
+  "close_scope": "更正链已交接；不等于申请承保完成"
+}

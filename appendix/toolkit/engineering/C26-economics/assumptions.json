@@ -1,0 +1,80 @@
+{
+  "kind": "synthetic_teaching_example",
+  "currency": "CNY",
+  "table_unit": "10000 CNY",
+  "not_industry_rate": true,
+  "supplier": {
+    "contract_wan": 80,
+    "engineer_days": 150,
+    "engineer_yuan_per_day": 3000,
+    "separate_support_days": 25,
+    "support_yuan_per_day": 2400,
+    "deployment_resource_wan": 4,
+    "deployment_resource_fixed_wan": 1,
+    "deployment_resource_variable_wan": 3,
+    "travel_review_wan": 3,
+    "acquisition_wan": 12,
+    "shared_allocation_wan": 15,
+    "baseline_direct_cost_wan": 58,
+    "baseline_wide_cost_wan": 85,
+    "scope_extension_days": 20,
+    "scope_extension_extra_resource_wan": 2,
+    "scope_extension_wide_cost_wan": 93,
+    "cash_scope": "58 direct plus 12 acquisition paid as listed; 15 allocation payment timing excluded",
+    "delayed_receipt": {
+      "move_36_from_month": 2,
+      "to_month": 4,
+      "ending_net_wan": 10,
+      "peak_month_end_gap_wan": 46
+    },
+    "cash_intra_month_limit": "月内付款顺序未建模，46为所列月末余额的最大缺口，不是逐日峰值。"
+  },
+  "customer": {
+    "monthly_tasks": 10000,
+    "gross_saved_minutes_per_task": 6,
+    "review_added_minutes_per_task": 2,
+    "observation_months_after_go_live": 12,
+    "net_released_hours_per_year": 8000,
+    "avoided_outsource_hours_per_month": 400,
+    "avoided_outsource_yuan_per_hour": 200,
+    "existing_internal_staff_cost_wan": 6,
+    "new_training_cash_wan": 2,
+    "operation_support_cash_wan": 12,
+    "economic_cost_wan": 100,
+    "incremental_cash_cost_wan": 94,
+    "avoided_cash_wan": 96,
+    "economic_break_even_outsource_hours_month": 416.6666666666667,
+    "no_cash_value_assigned_to_remaining_capacity": true
+  },
+  "future_decision_extended_scope": {
+    "earned_revenue_wan": 60,
+    "sunk_wide_cost_wan": 73,
+    "options": [
+      {
+        "name": "finish",
+        "future_revenue_wan": 20,
+        "future_cost_wan": 20,
+        "total_remainder_wan": -13
+      },
+      {
+        "name": "agreed_scope_reduction",
+        "future_revenue_wan": 12,
+        "future_cost_wan": 8,
+        "total_remainder_wan": -9
+      },
+      {
+        "name": "agreed_exit",
+        "future_revenue_wan": 0,
+        "future_cost_wan": 3,
+        "total_remainder_wan": -16
+      }
+    ]
+  },
+  "excluded": [
+    "tax",
+    "legal_revenue_recognition",
+    "company_total_cash_flow",
+    "financing_cost",
+    "a_real_customer_ROI_estimate"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "synthetic_teaching",
+  "existing_region": "R1",
+  "new_region": "R2",
+  "requested": "本周R2也上线",
+  "extra_required": {
+    "FDE": 16,
+    "客户系统工程师": 6,
+    "当地主管": 2
+  },
+  "available_extra": {
+    "FDE": 0,
+    "客户系统工程师": 0,
+    "当地主管": "未确认"
+  },
+  "decisions": [
+    {
+      "option": "原队伍本周两地上线",
+      "decision": "reject",
+      "why": "排期已经用满；异常预留不能重复计算为开发容量；当地主管未确认"
+    },
+    {
+      "option": "保留R1，推迟R2上线",
+      "decision": "current_choice",
+      "cost": "R2不能本周获得新能力"
+    },
+    {
+      "option": "R2只做需求观察",
+      "decision": "conditional_alternative",
+      "conditions": [
+        "客户主管同意顺延R1开发4小时",
+        "当地人员确认可提供观察条件；未确认前不承诺执行"
+      ],
+      "fde_hours": {
+        "R1开发": 14,
+        "R1共同观察": 6,
+        "异常预留": 8,
+        "产品反馈": 4,
+        "记录恢复": 4,
+        "R2需求观察": 4
+      },
+      "promises": "只作观察，未取得上线承诺；不动用尚未获得的系统工程师额外时间"
+    },
+    {
+      "option": "增加已具备接手条件的人",
+      "decision": "needs_new_capacity_plan",
+      "conditions": [
+        "实际可用时间",
+        "熟悉和交接投入",
+        "R2业务负责人到位"
+      ],
+      "promises": "招聘或借调请求本身不算有效产能"
+    }
+  ]
+}

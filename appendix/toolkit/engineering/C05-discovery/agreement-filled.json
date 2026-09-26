@@ -1,0 +1,71 @@
+{
+  "kind": "synthetic_teaching_example",
+  "project_id": "REPAIR-INTAKE",
+  "version": "D1",
+  "question": "缺型号是否主要因为填写说明不清？",
+  "observations": [
+    {
+      "id": "R-01",
+      "observed": "用户提供外壳铭牌照片，型号可辨",
+      "interpretation": "可进入员工确认，不代表所有请求如此",
+      "owner": "维修代表"
+    },
+    {
+      "id": "R-02",
+      "observed": "用户只上传品牌照片，原档案无型号",
+      "interpretation": "教学回访确认不知道拍哪里；尚须观察是否常见",
+      "owner": "受理主管"
+    },
+    {
+      "id": "R-03",
+      "observed": "该型号铭牌需要拆机才可见",
+      "interpretation": "超出本次用户自助采集范围",
+      "owner": "维修代表"
+    }
+  ],
+  "alternatives": [
+    {
+      "route": "表单说明与示意",
+      "decision": "先做",
+      "reason": "直接针对R-02资料未被提供的问题",
+      "cost": "制作示意、维护适用型号、保留人工入口"
+    },
+    {
+      "route": "AI提取文字",
+      "decision": "暂缓",
+      "reason": "R-02文字中没有型号，提取不能制造它"
+    },
+    {
+      "route": "AI对话并预约",
+      "decision": "不在首期",
+      "reason": "增加预约与承诺权限，未见当前障碍需要它"
+    }
+  ],
+  "scope": {
+    "included": "铭牌在外壳的一类设备，型号采集和员工确认",
+    "excluded": [
+      "拆机指导",
+      "自动预约",
+      "承诺到场时间"
+    ],
+    "manual_path": "找不到或不可辨时由受理主管安排联系"
+  },
+  "owners": {
+    "business_scope": "受理主管",
+    "data_sufficiency": "维修代表",
+    "record_availability": "系统负责人",
+    "implementation_and_versions": "工程师"
+  },
+  "trial": {
+    "synthetic_replays": 20,
+    "purpose": "验证普通/例外/范围外分流，不测真实放弃率",
+    "next_real_trial": "尚未执行；主管须记录资料可用率、二次追问、填表放弃与处理耗时",
+    "stop_on": [
+      "无法辨認记录被当作完整",
+      "范围外用户被引导拆机"
+    ],
+    "continue_if": "分流无上述错误且实际试用表明资料更可用，放弃与额外核查没有不可接受增加；真实容忍范围由业务确认",
+    "reject_if": "缺型号并非主要障碍，或简单说明增加负担而没有相应价值"
+  },
+  "review_trigger": "新增设备类别、承诺范围或真实试用发现改变解释"
+}

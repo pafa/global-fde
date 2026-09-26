@@ -1,0 +1,16 @@
+order_id,entry,paid_price,returned_full_refund,retained_revenue,retained_goods_cost,outbound_cost,return_handling,allocated_cohort_service,allocated_cohort_ai,net_contribution
+A01,A,100,true,0,0.0,8,10,2,0,-20.0
+A02,A,100,false,100,70.0,8,0,2,0,20.0
+A03,A,100,false,100,70.0,8,0,2,0,20.0
+A04,A,100,false,100,70.0,8,0,2,0,20.0
+A05,A,100,false,100,70.0,8,0,2,0,20.0
+A06,A,100,false,100,70.0,8,0,2,0,20.0
+A07,A,100,false,100,70.0,8,0,2,0,20.0
+A08,A,100,false,100,70.0,8,0,2,0,20.0
+A09,A,100,false,100,70.0,8,0,2,0,20.0
+A10,A,100,false,100,70.0,8,0,2,0,20.0
+B01,B,150,true,0,0.0,8,10,6,5,-29.0
+B02,B,150,true,0,0.0,8,10,6,5,-29.0
+B03,B,150,false,150,105.0,8,0,6,5,26.0
+B04,B,150,false,150,105.0,8,0,6,5,26.0
+B05,B,150,false,150,105.0,8,0,6,5,26.0

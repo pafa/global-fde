@@ -1,0 +1,13 @@
+party,item,amount_wan_cny,classification
+supplier,contract_revenue,80,revenue
+supplier,engineer_150_days,45,cost
+supplier,support_25_days,6,cost
+supplier,deployment_resource,4,cost
+supplier,travel_review,3,cost
+supplier,acquisition,12,cost
+supplier,shared_allocations,15,cost
+customer,same_contract,80,economic_cost
+customer,internal_existing_staff,6,economic_cost_not_incremental_cash
+customer,training_new_cash,2,economic_cost
+customer,12_month_operation,12,economic_cost
+customer,avoided_outsourcing_12_months,96,realized_avoided_cash

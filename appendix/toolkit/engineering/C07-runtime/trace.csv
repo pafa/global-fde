@@ -1,0 +1,9 @@
+step,illustrative_second,event,requirement_version,query_id,intent_id,receipt_id,cart_quantity,evidence,next_action
+1,0,query_sent,v1,Q1,,,0,max_width_cm=60,wait
+2,2,requirement_changed,v2,Q2,,,0,max_width_cm=55; Q1 pending,invalidate_Q1_for_recommendation
+3,4,query_returned_and_user_confirmed,v2,Q2,A1,,0,SKU-54 width=54; explicit user confirm qty=1,send_write
+4,5,write_committed_receipt_lost,v2,,A1,R1,1,cart_version=12; receipt and write atomic,mark_unconfirmed_client_side
+5,7,retry_same_intent,v2,,A1,R1,1,same payload hash; return stored receipt,do_not_write_again
+6,8,stale_query_returned,v1,Q1,,,1,SKU-59 width=59; current requirement v2,discard_for_recommendation
+7,10,resume_and_reconcile,v2,,A1,R1,1,read receipt and cart_version=12,no_additional_write
+8,11,user_notified,v2,,A1,R1,1,report SKU-54 quantity=1,complete

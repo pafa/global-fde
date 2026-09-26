@@ -1,0 +1,79 @@
+{
+  "kind": "synthetic_teaching_example",
+  "not_real_training": true,
+  "task": "在隔离环境更新维修资料检索，旧V1停用，新V2只适用X2",
+  "documents": [
+    {
+      "id": "V1",
+      "models": [
+        "X1",
+        "X2"
+      ],
+      "status": "retired"
+    },
+    {
+      "id": "V2",
+      "models": [
+        "X2"
+      ],
+      "status": "active"
+    }
+  ],
+  "permissions": {
+    "customer_maintainer": [
+      "read_staging_logs",
+      "update_staging_index",
+      "mark_documents_retired"
+    ],
+    "business_expert": [
+      "confirm_document_scope"
+    ],
+    "release_owner": [
+      "approve_production_change"
+    ],
+    "FDE_observer": [
+      "point_to_existing_guide",
+      "stop_exercise_if_real_environment_touched"
+    ]
+  },
+  "help_allowed": "可查看指南和请业务专家确认含义；观察者不代操作；无权限的产品问题按支持约定升级",
+  "attempts": [
+    {
+      "attempt": 1,
+      "action": "上传V2但漏停V1",
+      "test_X1": "返回V1旧答",
+      "result": "fail_stop_release",
+      "reason": "文件上传完成不等于有效版本选择正确",
+      "index_state_after_upload": {
+        "V1": "仍可检索，错误未停用",
+        "V2": "已加入且限定X2"
+      }
+    },
+    {
+      "attempt": 2,
+      "action": "V1历史不可检索；V2限定X2",
+      "test_X1": "无适用依据，转专业人员",
+      "test_X2": "返回V2",
+      "test_old_link": "不作为当前答案",
+      "result": "pass_for_this_change",
+      "release": "发布负责人核对后批准此变更",
+      "index_state_after_fix": {
+        "V1": "保留历史但不可作为当前依据",
+        "V2": "active_for_X2_only"
+      }
+    }
+  ],
+  "unknowns": [
+    "未测试所有设备",
+    "未测试真实值班交接",
+    "未检验供应商底层事故"
+  ],
+  "handover_output": [
+    "来源与范围",
+    "修改记录",
+    "三项复测结果",
+    "发布负责人决定",
+    "支持升级入口"
+  ],
+  "document_status_scope": "documents数组是第二次修正后的目标/最终教学状态，不是第一次上传时的索引状态。"
+}

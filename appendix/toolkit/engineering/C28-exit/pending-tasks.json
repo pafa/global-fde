@@ -1,0 +1,66 @@
+{
+  "kind": "synthetic_teaching",
+  "cutover_point": "T",
+  "preconditions": [
+    "隔离测试环境",
+    "旧系统新写入已冻结",
+    "旧发送队列停止确认",
+    "新系统不自动执行导入记录"
+  ],
+  "tasks": [
+    {
+      "task_id": "T01",
+      "version": 1,
+      "at_T": "ready_without_approval",
+      "export": [
+        "输入",
+        "版本1",
+        "无批准标记"
+      ],
+      "import_effect": "不产生授权",
+      "next": "业务负责人审批",
+      "stop_if": "找不到有权批准的人"
+    },
+    {
+      "task_id": "T02",
+      "version": 5,
+      "at_T": "approved_not_executed",
+      "action_id": "A02",
+      "approval": {
+        "id": "APP02",
+        "task_version": 5,
+        "approver": "教学业务负责人",
+        "scope": "指定任务与执行对象"
+      },
+      "export": [
+        "版本5内容",
+        "批准对象与范围",
+        "动作号A02",
+        "旧队列停止确认"
+      ],
+      "next": "负责人核对批准仍适用于新环境后接续",
+      "teaching_decision": "核对通过，允许接续；不是已实际执行的证据",
+      "stop_if": "任务、权限、对象变化或旧队列未停止；重新审批"
+    },
+    {
+      "task_id": "T03",
+      "version": 2,
+      "at_T": "sent_receipt_unknown",
+      "action_id": "A03",
+      "export": [
+        "动作号",
+        "外部服务标识",
+        "最后发送记录"
+      ],
+      "lookup": {
+        "key": "A03",
+        "teaching_result": "executed",
+        "external_receipt": "E03"
+      },
+      "next": "关联E03并记完成；不得再次执行",
+      "if_not_confirmed": "待核并升级，不按新动作重发"
+    }
+  ],
+  "overall_cutover": "blocked_by_component_L_and_new_runtime",
+  "success_scope": "仅证明本题三项记录的解释和下一动作；没有宣布真实迁移完成"
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "synthetic_teaching",
+  "not_otto_data": true,
+  "opportunities": {
+    "A": 100,
+    "B": 100
+  },
+  "currency": "教学人民币元",
+  "observation_end": "这15笔订单退货窗口结束后，同一观察批次",
+  "retained_goods_gross_margin_rate": 0.3,
+  "returned_goods": "全部可再次销售，不计减值；退货金额已从保留收入去掉，不能再扣一遍退款",
+  "outbound_cost_per_order": 8,
+  "handling_per_return": 10,
+  "cohort_service_cost": {
+    "A": 20,
+    "B": 30
+  },
+  "cohort_ai_cost": {
+    "A": 0,
+    "B": 25
+  },
+  "allocation_note": "CSV把批次客服和AI费用等额分摊至原始订单，仅便于求和；不代表每单真实耗用，敏感性中保持批次总额",
+  "excluded_costs": [
+    "公司固定管理成本",
+    "库存资金占用",
+    "税费"
+  ],
+  "causal_claim": false
+}

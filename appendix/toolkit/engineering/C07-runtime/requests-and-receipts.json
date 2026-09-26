@@ -1,0 +1,48 @@
+{
+  "kind": "synthetic_teaching_example",
+  "not_customer_code": true,
+  "initial_cart": {
+    "version": 11,
+    "quantity": 0
+  },
+  "intent": {
+    "intent_id": "A1",
+    "payload": {
+      "product_id": "SKU-54",
+      "quantity": 1,
+      "requirement_version": 2
+    },
+    "payload_sha256": "3a718fbba666f3019aaef75858106afbaceed07dc7124789160551d6112ba0b7"
+  },
+  "retry": {
+    "intent_id": "A1",
+    "payload": {
+      "product_id": "SKU-54",
+      "quantity": 1,
+      "requirement_version": 2
+    },
+    "payload_sha256": "3a718fbba666f3019aaef75858106afbaceed07dc7124789160551d6112ba0b7"
+  },
+  "receipt": {
+    "receipt_id": "R1",
+    "intent_id": "A1",
+    "payload_sha256": "3a718fbba666f3019aaef75858106afbaceed07dc7124789160551d6112ba0b7",
+    "status": "committed",
+    "cart_version": 12,
+    "product_id": "SKU-54",
+    "quantity": 1
+  },
+  "invariants": [
+    "相同动作号和相同内容只产生一次变更",
+    "相同动作号但内容不同必须报冲突，不当作新意图",
+    "旧需求查询只能留作诊断，不进入当前推荐",
+    "恢复先核回执和业务状态，不重放已经完成的写入"
+  ],
+  "excluded": [
+    "支付",
+    "库存保留",
+    "身份鉴权",
+    "完整幂等存储实现",
+    "崩溃期间分布式事务实现"
+  ]
+}
