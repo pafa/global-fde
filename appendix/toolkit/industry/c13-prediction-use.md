@@ -9,7 +9,7 @@ nav: false
 
 # 从警报到采用：保留每一步的分母
 
-工具编号 TK-C13-01。对应[第十三章](../../../chapters/C13.md)。数字完全虚构，不是easyJet结果，也不提供设备维修阈值。下载[已填CSV](c13-prediction-use-example.csv)。
+工具编号 TK-C13-01。对应[C13 制造与航空：工程师必须理解生产](../../../chapters/C13.md)。数字完全虚构，不是easyJet结果，也不提供设备维修阈值。下载[已填CSV](c13-prediction-use-example.csv)。
 
 ## 怎么用
 
