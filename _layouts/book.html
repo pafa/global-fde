@@ -157,7 +157,7 @@ button,a,input,summary{outline-offset:4px}
 </style>
 <noscript><style media="screen">.search,.menu,.progress,.page-toc{display:none!important}.book-content table{display:block;overflow-x:auto;max-width:100%}@media(max-width:980px){.sidebar{position:static;transform:none;visibility:visible;width:100%;max-height:none}.sidebar-header,.topbar{position:static}.sidebar-bottom{display:none}}</style></noscript>
 </head>
-<body{% if page.url == '/' %} class="is-home"{% endif %}>
+<body data-book-revision="{{ site.github.build_revision | default: '' }}"{% if page.url == '/' %} class="is-home"{% endif %}>
 {% assign book_pages = site.pages | where: "nav", true | sort: "book_order" %}
 {% assign repository_url = site.repository | prepend: "https://github.com/" %}
 {% capture issue_title %}[读者反馈] {{ page.title }}{% endcapture %}

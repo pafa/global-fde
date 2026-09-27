@@ -77,6 +77,8 @@
     "pending_capacity_next_hour": 5,
     "stop_intake_at_pending": 6,
     "stop_output_on_any_bypass": true,
+    "stop_intake_if_sources_unverifiable": true,
+    "unverifiable_sources_action": "复核人员无法取得或核实答复来源时，暂停新进件，将已接收任务转回原人工渠道",
     "basis": "该教学演练假定一名员工下一小时可处理5条；不是行业阈值"
   }
 }
