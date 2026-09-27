@@ -10,34 +10,64 @@ nav: true
 
 # 阅读索引：先作哪项判断，再去哪里找证据
 
-第一次读，先从[序章](../chapters/C00.md)进入，再依次读概念与模式的四章：[名称与前史](../chapters/C01.md)、[Palantir的现场与产品](../chapters/C02.md)、[平台与服务伙伴](../chapters/C03.md)、[模型与交付变化](../chapters/C04.md)。接着用[团队组成](../chapters/C25.md)和[项目经济性](../chapters/C26.md)回答“由谁承担、为什么值得做”，再沿[发现问题](../chapters/C05.md)、[数据含义](../chapters/C06.md)、[可靠运行](../chapters/C07.md)、[上线评估](../chapters/C08.md)、[采用与接手](../chapters/C09.md)走过一次项目，进入[产品复用](../chapters/C27.md)。
+第一次来，可以按眼前需要选一个入口：
 
-有了这些工具，再读行业实践（从[公共部门](../chapters/C10.md)至[科研与教育](../chapters/C20.md)）和地区条件（从[欧美](../chapters/C21.md)至[其他地区的具体实践](../chapters/C24.md)），比较同一种工作为何在不同环境中改变。最后用[边界与退出](../chapters/C28.md)、[职业能力](../chapters/C29.md)、[Agent带来的变化](../chapters/C30.md)回看自己的选择，以[结语](../chapters/C31.md)收束。
+- **从头理解这个概念：**从[序章](../chapters/C00.md)开始，随后按全书目录阅读。
+- **按自己的角色选读：**先看[序章中的三类读者路线](../chapters/C00.md#三种读者可以从不同地方开始)。
+- **解决手头的一项工作：**直接在下面四组任务中找材料，不必做齐全部练习。
 
-## 三条可选路线
-
-| 你的任务 | 建议路线 | 读完先作一项判断 |
-| --- | --- | --- |
-| 企业是否值得投入、由谁承担 | [概念边界](../chapters/C01.md) → [问题发现](../chapters/C05.md) → [团队](../chapters/C25.md) → [两边的项目账](../chapters/C26.md) → [退出](../chapters/C28.md) | 写出一个可与FDE比较的替代方案，算入客户自己的投入 |
-| 把演示变成可运行的工作 | [发现](../chapters/C05.md)、[数据](../chapters/C06.md)、[运行](../chapters/C07.md)、[评估](../chapters/C08.md)、[接手](../chapters/C09.md) → [复用](../chapters/C27.md) | 沿一次实际任务，标出资料、授权、异常与下一位责任人 |
-| 准备进入FDE岗位 | [概念与模式：C01—C04](../chapters/C01.md) → [项目过程：C05—C09](../chapters/C05.md) → [能力与作品](../chapters/C29.md) | 完成一个有异常、有修改记录的作品，再找真实使用者检验 |
-
-C编号是固定的查找标识，目录按阅读顺序编排。表中的编号范围需要依次阅读，链接指向组内起始章；这与序章和网站导航中的路线一致。走完后，再选择一个熟悉行业和一个陌生行业，并查看相应地区条件；需要评估长期投入时，可回读团队、经营、退出和未来章节。
+C编号用于查找，阅读顺序以目录为准。
 
 ## 手头有一项工作，直接从这里开始
 
-这些样例都明确标为教学，包含一份填好的记录和可复制空表；它们帮助讨论与练习，不是任何行业的统一制度。先看示范如何作决定，再替换成自己的依据，不把示范数字当目标。
+以下都是教学材料：有的提供已填记录与空表，有的提供数据、题面或参考程序。先选当前需要作的判断，再打开对应材料；示范数字不作目标，练习也不代替真实项目验收或行业制度。
 
-| 正在做的事 | 正文定位 | 已填样例与用法 |
+### 选问题与安排投入
+
+| 正在做的事 | 正文定位 | 材料与用法 |
 | --- | --- | --- |
-| 确认是否启动或扩大试点 | [公共采购与问责](../chapters/C10.md)“沿一条报修查询请求分配责任” | [两馆试点决策单](toolkit/industry/c10-pilot-decision.md)：甲馆有限继续、乙馆暂停，当前不扩大采购 |
-| 发现资料错了，追查影响 | [金融纠错](../chapters/C12.md)“错误要有能走回去的路” | [A-17更正记录](toolkit/industry/c12-correction-record.md)：旧文件、摘要、决定、工程修复与重新裁决 |
-| 核实省时是否被新增负担抵消 | [医疗工作量](../chapters/C11.md)“省下的时间，原来花在谁身上” | [工作量记录](toolkit/industry/c11-workload-record.md)：同路径、等长窗口，减少与新增分开 |
+| 选哪一个问题先做 | [问题发现](../chapters/C05.md) | [范围约定与三路取舍](toolkit/engineering/C05-discovery/README.md)：比较等待来源、简单替代与首期边界 |
+| 看一周团队容量如何被占用 | [团队组成](../chapters/C25.md) | [工作安排与请求取舍](toolkit/engineering/C25-team/README.md)：工程、客户配合与例外处理分别安排 |
 | 算客户与供应商的收益和成本 | [项目经济性](../chapters/C26.md)“一笔可以逐项检查的项目账” | [双方账与敏感性示例](toolkit/engineering/C26-economics/README.md)：现金、人员时间和分摊口径分别算 |
-| 检查接手者是否能处理下一次变化 | [采用与接手](../chapters/C09.md)“把主驾驶的位置慢慢交出来” | [接手演练](toolkit/engineering/C09-handover/README.md)：新版本可用，也要检查旧版本已停用 |
-| 看预测是否真的变成行动 | [生产行动](../chapters/C13.md)“预测之后，工作才刚刚开始” | [采用分母记录](toolkit/industry/c13-prediction-use.md)：提醒、可安排、已检查与处置分别统计 |
-| 两项文字修改冲突 | [专业判断](../chapters/C17.md)“为什么多找几个Agent还不够” | [条款冲突与裁决](toolkit/industry/c17-clause-conflict.md)：机械合并不能替代客户授权 |
+| 确认是否启动或扩大试点 | [公共采购与问责](../chapters/C10.md)“沿一条报修查询请求分配责任” | [两馆试点决策单](toolkit/industry/c10-pilot-decision.md)：甲馆有限继续、乙馆暂停，当前不扩大采购 |
+
+### 让数据与系统可靠运行
+
+| 正在做的事 | 正文定位 | 材料与用法 |
+| --- | --- | --- |
+| 同一个数为何从18变36，又变16 | [数据含义](../chapters/C06.md) | [连接与更正练习](toolkit/engineering/C06-data/README.md)：分开错误连接、源头更正与未报数据 |
+| 没收到回执，能不能再做一次 | [可靠运行](../chapters/C07.md) | [请求与恢复练习](toolkit/engineering/C07-runtime/README.md)：核对动作、内容和状态，处理未知结果 |
+| 评分通过，为何仍不能公开回答 | [上线评估](../chapters/C08.md) | [评分分歧与放行练习](toolkit/engineering/C08-evaluation/README.md)：先核对有效资料，再决定开放范围 |
+| 发现资料错了，追查影响 | [金融纠错](../chapters/C12.md)“错误要有能走回去的路” | [A-17更正记录](toolkit/industry/c12-correction-record.md)：旧文件、摘要、决定、工程修复与重新裁决 |
 | 避免旧建议在新状态下执行 | [电信处置](../chapters/C18.md)“沿着一次活动，把建议走到处置” | [建议失效时间线](toolkit/industry/c18-stale-advice.md)：维护生效时刻与发现过期时刻分开 |
+
+### 判断工作是否真的改善
+
+| 正在做的事 | 正文定位 | 材料与用法 |
+| --- | --- | --- |
+| 核实省时是否被新增负担抵消 | [医疗工作量](../chapters/C11.md)“省下的时间，原来花在谁身上” | [工作量记录](toolkit/industry/c11-workload-record.md)：同路径、等长窗口，减少与新增分开 |
+| 看预测是否真的变成行动 | [生产行动](../chapters/C13.md)“预测之后，工作才刚刚开始” | [采用分母记录](toolkit/industry/c13-prediction-use.md)：提醒、可安排、已检查与需处置问题分别统计 |
+| 改一次运输安排，会把等待移到哪里 | [物流与运输](../chapters/C15.md) | [两车调度练习](toolkit/engineering/C15-dispatch/README.md)：一起检查车辆、订单与时间窗口 |
+| 转化改善是否变成净贡献 | [零售与消费](../chapters/C16.md) | [交易与退货账](toolkit/engineering/C16-retail/README.md)：分开样本、退货与经营贡献 |
+| 两项文字修改冲突 | [专业判断](../chapters/C17.md)“为什么多找几个Agent还不够” | [条款冲突与裁决](toolkit/industry/c17-clause-conflict.md)：机械合并不能替代客户授权 |
+
+### 接手、复用与下一次实践
+
+| 正在做的事 | 正文定位 | 材料与用法 |
+| --- | --- | --- |
+| 检查接手者是否能处理下一次变化 | [采用与接手](../chapters/C09.md)“把主驾驶的位置慢慢交出来” | [接手演练](toolkit/engineering/C09-handover/README.md)：新版本可用，也要检查旧版本已停用 |
+| 第二客户能否沿用现有能力 | [产品复用](../chapters/C27.md) | [兼容与维护判断](toolkit/engineering/C27-reuse/README.md)：核对规则差别、旧客户约束和维护归属 |
+| 退出时，未完成任务和许可怎么处理 | [边界与退出](../chapters/C28.md) | [退出演练](toolkit/engineering/C28-exit/README.md)：区分缺批准、待接续、已执行待回执的任务 |
+| 用一个作品证明自己会交付 | [职业能力](../chapters/C29.md) | [三版本作品练习](toolkit/engineering/C29-practice/README.md)：运行或阅读数据与输出，说明变化及未覆盖能力 |
+
+## 负责交付业务时，按当前问题回读
+
+这是一条可选路线，可从任何一个问题进入，不要求先完成所有阶段：
+
+- **筹备：**[提案是否对准问题](../chapters/C05.md)、[团队能否承担](../chapters/C25.md)、[双方是否值得投入](../chapters/C26.md)。
+- **推进与调整：**[哪些结果可以放行](../chapters/C08.md)、[客户是否持续使用](../chapters/C09.md)、[第二客户能否复用](../chapters/C27.md)、[何时缩小或退出](../chapters/C28.md)。
+
+把阅读所得写进[结语的决定记录](../chapters/C31.md)：先列已知和待查，再写下一次检查条件。继续、暂停和采用更简单的办法，都需要自己的依据。
 
 ## 容易卡住的词，先这样理解
 
