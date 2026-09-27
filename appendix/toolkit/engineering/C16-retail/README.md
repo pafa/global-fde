@@ -1,8 +1,8 @@
 ---
 layout: "book"
 title: "C16：从下单追到同批交易净贡献"
-book_order: 1066
-part: "不同行业怎样改变交付"
+book_order: 1083
+part: "第4篇　走进行业：不同业务的交付难题"
 permalink: "/appendix/toolkit/engineering/C16-retail/README.html"
 nav: false
 ---

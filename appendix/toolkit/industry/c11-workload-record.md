@@ -1,15 +1,15 @@
 ---
 layout: "book"
 title: "同一路径的工作量与新增负担记录"
-book_order: 1100
-part: "不同行业怎样改变交付"
+book_order: 1117
+part: "第4篇　走进行业：不同业务的交付难题"
 permalink: "/appendix/toolkit/industry/c11-workload-record.html"
 nav: false
 ---
 
 # 同一路径的工作量与新增负担记录
 
-工具编号 TK-C11-01。对应[C11 医疗：让流程改善经得起追问](../../../chapters/C11.md)。所有数字均为虚构教学数据，不是任何医院的测量结果。下载[已填CSV](c11-workload-example.csv)。
+工具编号 TK-C11-01。对应[第23章 医疗：让流程改善经得起追问](../../../chapters/C11.md)。所有数字均为虚构教学数据，不是任何医院的测量结果。下载[已填CSV](c11-workload-example.csv)。
 
 ## 怎么用
 

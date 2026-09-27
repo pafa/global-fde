@@ -1,8 +1,8 @@
 ---
 layout: "book"
 title: "从旧值追到决定：更正记录"
-book_order: 1103
-part: "不同行业怎样改变交付"
+book_order: 1120
+part: "第4篇　走进行业：不同业务的交付难题"
 permalink: "/appendix/toolkit/industry/c12-correction-record.html"
 nav: false
 ---
@@ -11,7 +11,7 @@ nav: false
 
 用途：在一次资料更正会上，找到旧值进入过哪些摘要和决定，分清工程修复与业务重新处理。先填写“依据与替代关系”，再检查影响范围；不要先覆盖旧输出。
 
-以下全部为虚构教学数据，不是AIG、花旗或真实客户记录，也不是统一核保标准。配合[C12 金融与保险：可用之外，还要可追责](../../../chapters/C12.md)使用。可复制[已填CSV](c12-correction-example.csv)或[结构化示例](c12-correction-example.json)。
+以下全部为虚构教学数据，不是AIG、花旗或真实客户记录，也不是统一核保标准。配合[第24章 金融与保险：可用之外，还要可追责](../../../chapters/C12.md)使用。可复制[已填CSV](c12-correction-example.csv)或[结构化示例](c12-correction-example.json)。
 
 ## 已填示例：A-17
 

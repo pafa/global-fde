@@ -1,8 +1,8 @@
 ---
 layout: "book"
 title: "C25：一周排期怎样限制新的承诺"
-book_order: 1071
-part: "先决定是否值得组织一支FDE团队"
+book_order: 1088
+part: "第2篇　组织FDE：甲乙双方的投入与经营"
 permalink: "/appendix/toolkit/engineering/C25-team/README.html"
 nav: false
 ---

@@ -1,8 +1,8 @@
 ---
 layout: "book"
 title: "C05：一页项目约定"
-book_order: 1038
-part: "把一次项目做成可持续的能力"
+book_order: 1055
+part: "第3篇　交付FDE：从第一个问题到持续运行"
 permalink: "/appendix/toolkit/engineering/C05-discovery/README.html"
 nav: false
 ---

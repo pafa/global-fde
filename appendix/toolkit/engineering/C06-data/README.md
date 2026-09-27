@@ -1,8 +1,8 @@
 ---
 layout: "book"
 title: "C06：18、36、18、16分别怎么来的"
-book_order: 1042
-part: "把一次项目做成可持续的能力"
+book_order: 1059
+part: "第3篇　交付FDE：从第一个问题到持续运行"
 permalink: "/appendix/toolkit/engineering/C06-data/README.html"
 nav: false
 ---

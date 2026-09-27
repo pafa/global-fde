@@ -1,15 +1,15 @@
 ---
 layout: "book"
 title: "从警报到采用：保留每一步的分母"
-book_order: 1105
-part: "不同行业怎样改变交付"
+book_order: 1122
+part: "第4篇　走进行业：不同业务的交付难题"
 permalink: "/appendix/toolkit/industry/c13-prediction-use.html"
 nav: false
 ---
 
 # 从警报到采用：保留每一步的分母
 
-工具编号 TK-C13-01。对应[C13 制造与航空：工程师必须理解生产](../../../chapters/C13.md)。数字完全虚构，不是easyJet结果，也不提供设备维修阈值。下载[已填CSV](c13-prediction-use-example.csv)。
+工具编号 TK-C13-01。对应[第26章 制造与航空：工程师必须理解生产](../../../chapters/C13.md)。数字完全虚构，不是easyJet结果，也不提供设备维修阈值。下载[已填CSV](c13-prediction-use-example.csv)。
 
 ## 怎么用
 
