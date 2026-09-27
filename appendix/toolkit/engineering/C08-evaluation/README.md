@@ -1,8 +1,8 @@
 ---
 layout: "book"
 title: "C08：三题不能证明可靠，但能推翻一个错误评分办法"
-book_order: 1053
-part: "把一次项目做成可持续的能力"
+book_order: 1070
+part: "第3篇　交付FDE：从第一个问题到持续运行"
 permalink: "/appendix/toolkit/engineering/C08-evaluation/README.html"
 nav: false
 ---

@@ -1,8 +1,8 @@
 ---
 layout: "book"
 title: "C09：让接手者完成下一次资料变化"
-book_order: 1057
-part: "把一次项目做成可持续的能力"
+book_order: 1074
+part: "第3篇　交付FDE：从第一个问题到持续运行"
 permalink: "/appendix/toolkit/engineering/C09-handover/README.html"
 nav: false
 ---

@@ -1,15 +1,15 @@
 ---
 layout: "book"
 title: "一条建议何时失效"
-book_order: 1108
-part: "不同行业怎样改变交付"
+book_order: 1125
+part: "第4篇　走进行业：不同业务的交付难题"
 permalink: "/appendix/toolkit/industry/c18-stale-advice.html"
 nav: false
 ---
 
 # 一条建议何时失效
 
-工具编号 TK-C18-01。对应[C18 电信：巨型网络里的小范围落地](../../../chapters/C18.md)。时间、对象和版本均为虚构教学；不含任何真实设备参数或网络操作指令。下载[已填时间线CSV](c18-stale-advice-example.csv)。
+工具编号 TK-C18-01。对应[第29章 电信：巨型网络里的小范围落地](../../../chapters/C18.md)。时间、对象和版本均为虚构教学；不含任何真实设备参数或网络操作指令。下载[已填时间线CSV](c18-stale-advice-example.csv)。
 
 ## 怎么用
 

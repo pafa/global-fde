@@ -1,15 +1,15 @@
 ---
 layout: "book"
 title: "两项修改碰到同一句：冲突与裁决"
-book_order: 1106
-part: "不同行业怎样改变交付"
+book_order: 1123
+part: "第4篇　走进行业：不同业务的交付难题"
 permalink: "/appendix/toolkit/industry/c17-clause-conflict.html"
 nav: false
 ---
 
 # 两项修改碰到同一句：冲突与裁决
 
-工具编号 TK-C17-01。对应[C17 法律与专业服务：交付的是哪一种信任](../../../chapters/C17.md)。条款、规则和裁决完全虚构，仅演示文档工程，不判断真实合同法律效力。
+工具编号 TK-C17-01。对应[第25章 法律与专业服务：交付的是哪一种信任](../../../chapters/C17.md)。条款、规则和裁决完全虚构，仅演示文档工程，不判断真实合同法律效力。
 
 ## 怎么用
 

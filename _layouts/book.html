@@ -38,6 +38,7 @@ button,a,input,summary{outline-offset:4px}
 .group-links{padding:0 0 10px}
 .chapter-link{display:grid;grid-template-columns:25px minmax(0,1fr);gap:8px;align-items:baseline;border-left:2px solid transparent;border-radius:3px;padding:10px 9px;margin:2px 0;text-decoration:none;color:#48584c;font-size:14px;line-height:1.65;min-height:44px}
 .chapter-number{font-size:11px;color:#748077;font-weight:500;font-variant-numeric:tabular-nums}
+.chapter-kicker{font-size:13px;line-height:1.6;color:var(--muted);margin:0 0 12px;font-weight:600;letter-spacing:.04em}
 .chapter-link:hover{background:#edf1ed;color:var(--ink)}
 .chapter-link[aria-current="page"]{background:var(--active);border-color:var(--accent);color:var(--accent);font-weight:650}
 .chapter-link[aria-current="page"] .chapter-number{color:var(--accent)}
@@ -154,6 +155,8 @@ button,a,input,summary{outline-offset:4px}
   .book-content img,.is-home .book-content>p:first-child img{width:auto;height:auto;max-width:100%;max-height:70vh}
   .book-content a{color:inherit}.book-content table{font-size:9pt}.book-content th,.book-content td{min-width:0}.table-scroll{overflow:visible}.reading-footer{margin:20px 0}
 }
+
+.relocated-section{display:none;padding:16px 20px;margin:0 0 24px;border-left:3px solid var(--accent);background:#f1f5ef;font:14px/1.9 var(--sans)}.relocated-section:target{display:block}
 </style>
 <noscript><style media="screen">.search,.menu,.progress,.page-toc{display:none!important}.book-content table{display:block;overflow-x:auto;max-width:100%}@media(max-width:980px){.sidebar{position:static;transform:none;visibility:visible;width:100%;max-height:none}.sidebar-header,.topbar{position:static}.sidebar-bottom{display:none}}</style></noscript>
 </head>
@@ -187,7 +190,7 @@ button,a,input,summary{outline-offset:4px}
  <summary class="part">{{ chapter.part | escape }}</summary>
  <div class="group-links">
  {% assign previous_part = chapter.part %}{% endif %}
- <a class="chapter-link" href="{{ chapter.url | relative_url }}"{% if chapter.url == page.url %} aria-current="page"{% endif %}><span class="chapter-number" aria-hidden="true">{% if chapter.chapter_id == 'C00' %}序{% elsif chapter.chapter_id == 'C31' %}终{% elsif chapter.chapter_id == 'A01' %}附{% else %}{{ chapter.chapter_id | remove: 'C' }}{% endif %}</span><span class="chapter-title">{{ chapter.title | escape }}</span></a>
+ <a class="chapter-link" href="{{ chapter.url | relative_url }}"{% if chapter.url == page.url %} aria-current="page"{% endif %}><span class="chapter-number" aria-hidden="true">{% if chapter.chapter_id == 'C00' %}序{% elsif chapter.chapter_id == 'C31' %}终{% elsif chapter.chapter_id == 'A01' %}附{% else %}{{ chapter.chapter_label | remove: '第' | remove: '章' }}{% endif %}</span><span class="chapter-title">{{ chapter.title | escape }}</span></a>
  {% endfor %}
  </div></details>
  <p class="no-results" hidden role="status">没有找到对应章节，请换一个关键词。</p>
@@ -203,6 +206,8 @@ button,a,input,summary{outline-offset:4px}
 </header>
 <div class="layout">
  <main class="reading" id="reading" tabindex="-1">
+  {% if page.chapter_label %}<p class="chapter-kicker">{{ page.part | escape }} · {{ page.chapter_label | escape }}</p>{% endif %}
+  {% for moved in page.relocated_sections %}<aside class="relocated-section" id="{{ moved.anchor | escape }}" aria-label="小节新位置">原小节“{{ moved.title | escape }}”已调整，可在以下位置继续阅读：{% for destination in moved.destinations %}<a href="{{ destination.url | relative_url }}">{{ destination.title | escape }}</a>{% unless forloop.last %}、{% endunless %}{% endfor %}。</aside>{% endfor %}
   <article class="book-content">{{ content }}</article>
   {% if page.nav %}
   <nav class="next-prev" aria-label="前后章节">

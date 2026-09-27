@@ -1,8 +1,8 @@
 ---
 layout: "book"
 title: "C26：同一份80万元合同的两边"
-book_order: 1075
-part: "先决定是否值得组织一支FDE团队"
+book_order: 1092
+part: "第2篇　组织FDE：甲乙双方的投入与经营"
 permalink: "/appendix/toolkit/engineering/C26-economics/README.html"
 nav: false
 ---
