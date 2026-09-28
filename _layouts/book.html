@@ -45,6 +45,10 @@ button,a,input,summary{outline-offset:4px}
 .no-results{padding:14px 8px;color:var(--muted);font-size:14px}
 .sidebar-bottom{margin:24px 24px 28px;font-size:12px;line-height:1.9;color:var(--muted)}
 .sidebar-bottom a{color:inherit}
+.sidebar-bottom .publisher{display:flex;align-items:center;gap:8px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);min-height:44px;text-decoration:none;font-size:13px;font-weight:500}
+.publisher img{width:24px;height:24px;flex:none;border-radius:6px}
+.sidebar-bottom .publisher:hover{color:var(--accent)}
+.publisher:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
 .topbar{height:64px;border-bottom:1px solid var(--line);padding:0 36px;display:flex;align-items:center;justify-content:space-between;gap:18px;background:var(--paper)}
 .topbar a{font-size:13px;color:#536158;text-decoration:none}
 .topbar a:hover{color:var(--accent)}
@@ -195,7 +199,9 @@ button,a,input,summary{outline-offset:4px}
  </div></details>
  <p class="no-results" hidden role="status">没有找到对应章节，请换一个关键词。</p>
  </nav>
- <p class="sidebar-bottom">{{ site.edition }} · <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans">CC BY-SA 4.0</a><br><a href="{{ repository_url }}">在 GitHub 阅读与参与</a></p>
+ <div class="sidebar-bottom">{{ site.edition }} · <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans">CC BY-SA 4.0</a><br><a href="{{ repository_url }}">在 GitHub 阅读与参与</a>
+ <a class="publisher" href="https://xiaoha.org/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/xiaoha-logo.png' | relative_url }}" width="24" height="24" alt=""><span>小哈公社出品</span></a>
+ </div>
 </aside>
 <div class="backdrop" aria-hidden="true"></div>
 <header class="topbar">
