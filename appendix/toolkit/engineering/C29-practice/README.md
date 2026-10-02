@@ -1,7 +1,7 @@
 ---
 layout: "book"
 title: "C29：预约与候补，三个版本的交付练习"
-book_order: 1107
+book_order: 1113
 part: "第6篇　成为FDE：从能力准备到长期成长"
 permalink: "/appendix/toolkit/engineering/C29-practice/README.html"
 nav: false

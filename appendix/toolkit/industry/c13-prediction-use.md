@@ -1,7 +1,7 @@
 ---
 layout: "book"
 title: "从警报到采用：保留每一步的分母"
-book_order: 1122
+book_order: 1128
 part: "第4篇　走进行业：不同业务的交付难题"
 permalink: "/appendix/toolkit/industry/c13-prediction-use.html"
 nav: false
