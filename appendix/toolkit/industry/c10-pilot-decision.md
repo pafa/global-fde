@@ -1,7 +1,7 @@
 ---
 layout: "book"
 title: "试点决策单：两馆维修查询"
-book_order: 1115
+book_order: 1122
 part: "第4篇　走进行业：不同业务的交付难题"
 permalink: "/appendix/toolkit/industry/c10-pilot-decision.html"
 nav: false

@@ -1,7 +1,7 @@
 ---
 layout: "book"
 title: "两项修改碰到同一句：冲突与裁决"
-book_order: 1123
+book_order: 1130
 part: "第4篇　走进行业：不同业务的交付难题"
 permalink: "/appendix/toolkit/industry/c17-clause-conflict.html"
 nav: false

@@ -1,7 +1,7 @@
 ---
 layout: "book"
 title: "从旧值追到决定：更正记录"
-book_order: 1120
+book_order: 1127
 part: "第4篇　走进行业：不同业务的交付难题"
 permalink: "/appendix/toolkit/industry/c12-correction-record.html"
 nav: false

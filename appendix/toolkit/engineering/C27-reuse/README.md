@@ -1,7 +1,7 @@
 ---
 layout: "book"
 title: "C27：让第二个客户增加能力，而不破坏第一个"
-book_order: 1098
+book_order: 1105
 part: "第3篇　交付FDE：从第一个问题到持续运行"
 permalink: "/appendix/toolkit/engineering/C27-reuse/README.html"
 nav: false
