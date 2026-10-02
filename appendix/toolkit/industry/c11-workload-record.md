@@ -1,7 +1,7 @@
 ---
 layout: "book"
 title: "同一路径的工作量与新增负担记录"
-book_order: 1117
+book_order: 1124
 part: "第4篇　走进行业：不同业务的交付难题"
 permalink: "/appendix/toolkit/industry/c11-workload-record.html"
 nav: false

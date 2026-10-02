@@ -1,7 +1,7 @@
 ---
 layout: "book"
 title: "C07：一台洗衣机为什么没有变成两台"
-book_order: 1066
+book_order: 1073
 part: "第3篇　交付FDE：从第一个问题到持续运行"
 permalink: "/appendix/toolkit/engineering/C07-runtime/README.html"
 nav: false

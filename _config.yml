@@ -3,7 +3,8 @@ description: 从概念的早期记录到全球行业现场，一本兼顾经营�
 url: https://pafa.github.io
 baseurl: /global-fde
 repository: pafa/global-fde
-edition: 2026年9月版
+edition: 2026年9月修订版
+cutoff_date: "2026-09-30"
 lang: zh-CN
 markdown: kramdown
 plugins:

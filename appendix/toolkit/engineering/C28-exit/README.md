@@ -1,7 +1,7 @@
 ---
 layout: "book"
 title: "C28：带走未完成的工作，也核清继续使用的权利"
-book_order: 1103
+book_order: 1110
 part: "第3篇　交付FDE：从第一个问题到持续运行"
 permalink: "/appendix/toolkit/engineering/C28-exit/README.html"
 nav: false

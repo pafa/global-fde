@@ -226,7 +226,7 @@ button,a,input,summary{outline-offset:4px}
   <footer class="reading-footer">
    <div class="footer-actions"><a class="feedback" href="{{ issue_link }}" target="_blank" rel="noopener">反馈本页</a><a href="{{ repository_url }}/edit/main/{{ page.path | uri_escape }}" target="_blank" rel="noopener">编辑本页</a><a href="{{ repository_url }}/fork" target="_blank" rel="noopener">Fork 这本书</a></div>
    <p>发现错漏或不同意见，欢迎反馈。可先选中一段原文，再点击“反馈本页”，前往 GitHub 填写 Issue；提交需登录 GitHub。</p>
-   <p>《全球FDE实战》· {{ site.edition }} · 资料截止 2026-09-25。书中区分来源陈述、研究判断与教学示例。<br>原创内容采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans">CC BY-SA 4.0</a>，署名、注明修改，并以相同许可分享；第三方材料权利归原权利人。</p>
+   <p>《全球FDE实战》· {{ site.edition }} · 资料截止 {{ site.cutoff_date | escape }}。书中区分来源陈述、研究判断与教学示例。<br>原创内容采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans">CC BY-SA 4.0</a>，署名、注明修改，并以相同许可分享；第三方材料权利归原权利人。</p>
   </footer>
  </main>
  <aside class="page-toc" aria-label="本章目录"><h2>本章目录</h2><nav id="section-nav"></nav><div class="toc-actions"><a class="feedback" href="{{ issue_link }}" target="_blank" rel="noopener">反馈本章</a><a href="{{ repository_url }}/edit/main/{{ page.path | uri_escape }}" target="_blank" rel="noopener">编辑本章</a></div></aside>

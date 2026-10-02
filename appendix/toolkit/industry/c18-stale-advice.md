@@ -1,7 +1,7 @@
 ---
 layout: "book"
 title: "一条建议何时失效"
-book_order: 1125
+book_order: 1132
 part: "第4篇　走进行业：不同业务的交付难题"
 permalink: "/appendix/toolkit/industry/c18-stale-advice.html"
 nav: false
