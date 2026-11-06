@@ -214,6 +214,8 @@ button,a,input,summary{outline-offset:4px}
  <main class="reading" id="reading" tabindex="-1">
   {% if page.chapter_label %}<p class="chapter-kicker">{{ page.part | escape }} · {{ page.chapter_label | escape }}</p>{% endif %}
   {% for moved in page.relocated_sections %}<aside class="relocated-section" id="{{ moved.anchor | escape }}" aria-label="小节新位置">原小节“{{ moved.title | escape }}”已调整，可在以下位置继续阅读：{% for destination in moved.destinations %}<a href="{{ destination.url | relative_url }}">{{ destination.title | escape }}</a>{% unless forloop.last %}、{% endunless %}{% endfor %}。</aside>{% endfor %}
+  {% for old in page.legacy_web_fragments %}<aside class="relocated-section" id="{{ old.web_anchor | escape }}" aria-label="旧小节说明">原小节“{{ old.old_heading | escape }}”：{{ old.notice | escape }}{% if old.status == 'renamed' %}可在本章继续阅读：<a href="#{{ old.target_anchor | escape }}">{{ old.target_heading | escape }}</a>。{% endif %}</aside>{% endfor %}
+  {% for note in page.removed_legacy_footnotes %}<aside class="relocated-section" id="fn:{{ note }}" aria-label="旧版脚注说明">该旧版脚注已移除；请以现版正文中的引用为准。</aside>{% endfor %}
   <article class="book-content">{{ content }}</article>
   {% if page.nav %}
   <nav class="next-prev" aria-label="前后章节">
